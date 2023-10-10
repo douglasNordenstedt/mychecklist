@@ -3,9 +3,16 @@ extends layout
 block content
   script.
     function addTask() {
+
+      let  taskText = document.getElementById('newTaskText').value;
+      li.appendChild(document.createInput(hej));
+
+
       alert('Task added');
     }
 
   h1= title
   p Welcome to CheckMate
   button(onclick="addTask()") Add task
+  input(type="text" id="newTaskText" placeholder='info')
+  ul(id= 'taskList')

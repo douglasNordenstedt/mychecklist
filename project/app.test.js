@@ -1,25 +1,22 @@
 const request = require('supertest');
 const app = require('./app');
 
-const othertests = require('./othertests')
+const othertests = require('./othertests');
 const i = require('./othertests').i;
 
-describe('GET/ homepage tests', () =>{
+//const tasks = require('./routes/users');
+const tasks = require('./routes/users').tasks;
 
-    test('is the checklist complete?'), done =>{
-        
-    }
 
-})
 
-describe('testing test', () => { 
+describe('testing users stuff', () => { 
 
-    test('GET/ import const', () => {
-        request(othertests)
-        expect(i)
-        .toBe(1)
-    });
+      test('Check if a variable is an array', () => {
+        expect(Array.isArray(tasks))
+        .toBe(true);
+      });
 
+     
 })
 
 describe('sites running', () =>{
