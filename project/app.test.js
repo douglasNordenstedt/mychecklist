@@ -3,8 +3,7 @@ const app = require('./app');
 
 
 //const tasks = require('./routes/users');
-const tasks = require('./routes/index').tasks;
-
+let tasks = require('./routes/index').tasks;
 
 
 describe('testing users stuff', () => { 

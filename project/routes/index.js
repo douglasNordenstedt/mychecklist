@@ -2,12 +2,22 @@ var express = require('express');
 var router = express.Router();
 
 
+const someThing = require('./users').someThing;
+
+let tasks = [{
+  id: 1,
+  description: "task 1"
+},
+{
+  id: 2,
+  description: "task 2"
+}
+]
 
 /* GET home page. */
 
 router.get('/', function(req, res, next) {
-  //res.render('index');
-  res.render('index', {title : "CheckMate"});
+  res.render('index', {title : "CheckMate", tasks});
 });
 
 
@@ -24,17 +34,6 @@ router.get('/users/:id', function(req, res, next) {
 
 
 
-
-
-let tasks = [{
-  id: 1,
-  description: "task 1"
-},
-{
-  id: 2,
-  description: "task 2"
-}
-]
 
 
 

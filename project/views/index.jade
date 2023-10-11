@@ -2,14 +2,24 @@ extends layout
 
 block content
   script.
+    
     function addTask(taskdata) {
-      alert('Task added');
-
       
+      
+      alert('Task added');
     }
-
+    
 
   h1= title
   p Welcome to CheckMate
   button(onclick="addTask()") Add task
-  input(type="text" id="newTaskText" placeholder='info')
+  input(type="text" id='newTaskText' placeholder='info')
+  ul(id='taskId')
+  
+  body
+  h3 ToDo:
+  ul
+    each task in tasks
+      li= task.description
+     
+  
